@@ -1,7 +1,7 @@
 /**
  * @fileOverview Import bitmap data into Scratch 3.0, resizing image as necessary.
  */
-const getFonts = require('scratch-render-fonts');
+// const getFonts = require('scratch-render-fonts');
 
 /**
  * Given SVG data, inline the fonts. This allows them to be rendered correctly when set
@@ -18,7 +18,9 @@ const getFonts = require('scratch-render-fonts');
  * @return {string} The svg with any needed fonts inlined
  */
 const inlineSvgFonts = function (svgString) {
-    const FONTS = getFonts();
+    // 暂时去除字体，因为字体文件太大，导致打包后的文件太大
+    // 后续若引入字体改为按需加载
+    const FONTS = {};
     // Make it clear that this function only operates on strings.
     // If we don't explicitly throw this here, the function silently fails.
     if (typeof svgString !== 'string') {
