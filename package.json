@@ -1,5 +1,5 @@
 {
-  "name": "scratch-svg-renderer",
+  "name": "@wado/scratch-svg-renderer",
   "version": "0.2.0",
   "description": "SVG renderer for Scratch",
   "main": "./src/index.js",
